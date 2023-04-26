@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
+
+
+.img-banner{
+    filter: brightness(0.3);
+    width: 100%;
+}
+
+#container{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    font-family: 'Dancing Script', cursive;
+    font-size:2.5em;
+}
+
+.subtitle{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 0.6em;
+}
+
+@media(min-width:768px){
+    .title{
+        font-size: 80px;
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
+}
