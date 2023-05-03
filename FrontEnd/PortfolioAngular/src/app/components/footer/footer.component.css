@@ -1,0 +1,16 @@
+
+.footer{
+    background-color: #0f0f0f;
+    width: 100%;
+}
+
+.bi{
+    color:#ffffff;
+}
+.btn{
+    transition: transform 250ms;
+}
+.icon:hover{
+    transform: translateY(-7px);
+}
+
