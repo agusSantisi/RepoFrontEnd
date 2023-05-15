@@ -1,0 +1,23 @@
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img{
+    width: 8rem;
+    padding-top: 10px;
+}
+
+.img-argPrograma{
+    filter: invert(1);
+}

@@ -1,1 +1,9 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&display=swap');
 
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}

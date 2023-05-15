@@ -1,51 +1,15 @@
 <div class="row gap-4">
     <h2>Educación</h2>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
+    <div class="container">
+        <button class="btn btn-primary m-3" type="button" routerLink="/nuevaedu" *ngIf="isLogged" >Agregar educación</button>
+    </div>
+    <div class="card col-sm-12 col-md-6 " style="width: 18rem;" *ngFor="let Educacion of educacion">
         <img src="../../../assets/img/Logo_CoderHouse.png" class="card-img" alt="...">
         <div class="card-body">
-            <h4 class="card-title"><strong>Curso Desarrollo Web</strong></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="https://www.coderhouse.com/certificados/62de05b2ce22be0024f1cfcb" target="_blank" class="btn btn-primary">Certificado</a>
-        </div>
-    </div>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
-        <img src="../../../assets/img/Logo_CoderHouse.png" class="card-img" alt="...">
-        <div class="card-body">
-            <h4 class="card-title"><strong> Curso JavaScript</strong></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="https://www.coderhouse.com/certificados/633483259ccb3d000e3de21d" target="_blank" class="btn btn-primary">Certificado</a>
-        </div>
-    </div>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
-        <img src="../../../assets/img/Logo_CoderHouse.png" class="card-img" alt="...">
-        <div class="card-body">
-            <h4 class="card-title"><strong> Curso React</strong></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="https://www.coderhouse.com/certificados/63758ebec9ae2e000ef57ebe" target="_blank" class="btn btn-primary">Certificado</a>
-        </div>
-    </div>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
-        <img src="../../../assets/img/Logo_CoderHouse.png" class="card-img" alt="...">
-        <div class="card-body">
-            <h4 class="card-title"><strong>Curso BackEnd</strong></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Certificado</a>
-        </div>
-    </div>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
-        <img src="../../../assets/img/APlogo.png" class="card-img img-argPrograma" alt="...">
-        <div class="card-body">
-            <h4 class="card-title"><strong>Curso #SeProgramar</strong></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Certificado</a>
-        </div>
-    </div>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
-        <img src="../../../assets/img/APlogo.png" class="card-img img-argPrograma   " alt="...">
-        <div class="card-body">
-            <h4 class="card-title"><strong> Curso #YoProgramo 4.0</strong></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Certificado</a>
+            <h4 class="card-title"><strong>{{Educacion.nombreE}}</strong></h4>
+            <p class="card-text">{{Educacion.descripcionE}}</p>
+            <button class="btn btn-primary m-3" routerLink="/editedu/{{Educacion.id}}" *ngIf="isLogged">Editar</button>
+            <button class="btn btn-primary m-3" *ngIf="isLogged" (click)="delete(Educacion.id)">Borrar</button>
         </div>
     </div>
 </div>

@@ -1,0 +1,16 @@
+<div class="row gap-4">
+    <h2>Experiencia Laboral</h2>
+    <div class="container">
+        <button class="btn btn-primary m-3" type="button" routerLink="/nuevaexp" *ngIf="isLogged" >Agregar experiencia</button>
+    </div>
+    <div class="card col-sm-12 col-md-6 " style="width: 18rem;" *ngFor="let Experiencia of experiencia">
+        <img src="../../../assets/img/asistente.png" class="card-img" alt="...">
+        <div class="card-body">
+            <h4 class="card-title"><strong>{{Experiencia.nombreE}}</strong></h4>
+            <p class="card-text">{{Experiencia.descripcionE}}</p>
+            <button class="btn btn-primary m-3" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">Editar</button>
+            <button class="btn btn-primary m-3" *ngIf="isLogged" (click)="delete(Experiencia.id)">Borrar</button>
+        </div>
+    </div>
+</div>
+
