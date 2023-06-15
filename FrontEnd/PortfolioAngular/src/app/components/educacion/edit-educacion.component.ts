@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { ImageService } from 'src/app/service/image.service';
 
 @Component({
   selector: 'app-edit-educacion',
@@ -15,12 +16,14 @@ export class EditEducacionComponent implements OnInit {
   
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
+
     this.eService.detail(id).subscribe(data =>{
       this.educacion = data;
     }, err =>{
       alert('Algo no salió como esperabamos...');
       this.router.navigate(['']);
     })
+    
   }
 
   onUpdate(): void{
@@ -31,5 +34,7 @@ export class EditEducacionComponent implements OnInit {
       alert('Algo no salió como esperabamos...');
       this.router.navigate(['']);
     })
+    
   }
+
 }

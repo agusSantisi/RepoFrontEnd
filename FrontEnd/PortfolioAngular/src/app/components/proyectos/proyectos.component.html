@@ -1,11 +1,17 @@
-<div class="row gap-4">
+<div class="row gap-4 my-5">
     <h2>Proyectos</h2>
-    <div class="card col-sm-12 col-md-6 " style="width: 18rem;">
-        <img src="../../../assets/img/Central_Argentino.png" class="card-img " alt="...">
+    <div class="container">
+        <button class="btn m-3" type="button" routerLink="/nuevopro" *ngIf="isLogged" >Agregar proyecto</button>
+    </div>
+    <div class="card col-sm-12 col-md-6 " style="width: 18rem;" *ngFor="let Proyecto of proyecto">
         <div class="card-body">
-            <h4 class="card-title"><strong>Central Argentino</strong></h4>
-            <p class="card-text">Sitio web para un club de barrio, separado por las diferentes actividades y secciones que precisaba el cliente.</p>
-            <a href="https://delicate-starburst-ccf0a3.netlify.app/" target="_blank" class="btn btn-primary">Ir al sitio</a>
+            <h4 class="card-title"><strong>{{Proyecto.nombreP}}</strong></h4>
+            <p class="card-text">{{Proyecto.descripcionP}}</p>
+            <button class="btn m-3">
+                <a class="link" href="{{Proyecto.link}}" target="_blank">Link al proyecto</a>
+            </button>
+            <button class="btn m-3" routerLink="/editpro/{{Proyecto.id}}" *ngIf="isLogged">Editar</button>
+            <button class="btn m-3" *ngIf="isLogged" (click)="delete(Proyecto.id)">Borrar</button>
         </div>
     </div>
 </div>

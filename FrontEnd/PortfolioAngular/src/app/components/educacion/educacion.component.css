@@ -11,11 +11,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.card-img{
-    width: 8rem;
+
+.card:hover{
+    transform: scale(1.1);
+    transition: transform 250ms;
+}
+
+.card:not(:hover){
+    transition: transform 250ms;
 }
 
 .img-argPrograma{
     filter: invert(1);
 }
+@media(min-width:768px){
+    h2{
+        font-size:2.8em;
+    }
+}
+
+.btn{
+    background-color: #8be8da;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;   
+    font-weight: bold;
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: transform 250ms;
+}
+.btn:not(:hover){
+    transition: transform 250ms;
+}
+

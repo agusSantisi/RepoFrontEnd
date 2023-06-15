@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
+import { ImageService } from 'src/app/service/image.service';
 import { SexperienciaService } from 'src/app/service/sexperiencia.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class EditExperienciaComponent implements OnInit{
   
   expLab : Experiencia = null;
   
-  constructor(private sExperiencia: SexperienciaService, private activatedRoute: ActivatedRoute, private router: Router ){}
+  constructor(private sExperiencia: SexperienciaService, public imageService: ImageService,  private activatedRoute: ActivatedRoute, private router: Router ){}
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
@@ -26,6 +27,8 @@ export class EditExperienciaComponent implements OnInit{
 
   onUpdate(): void{
     const id = this.activatedRoute.snapshot.params['id'];
+
+
     this.sExperiencia.update(id, this.expLab).subscribe(data => {
       this.router.navigate(['']);
     }, err =>{
@@ -33,4 +36,5 @@ export class EditExperienciaComponent implements OnInit{
       this.router.navigate(['']);
     })
   }
+
 }

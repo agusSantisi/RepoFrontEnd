@@ -12,6 +12,7 @@
 .btn:not(:hover){
     transition: transform 250ms;
 }
+
 .container{
     display: flex;
     justify-content: center;

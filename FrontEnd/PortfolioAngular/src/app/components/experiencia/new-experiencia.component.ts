@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
+import { ImageService } from 'src/app/service/image.service';
 import { SexperienciaService } from 'src/app/service/sexperiencia.service';
 
 @Component({
@@ -30,5 +31,6 @@ export class NewExperienciaComponent implements OnInit{
       this.router.navigate(['']);
     });
   }
+
 
 }
